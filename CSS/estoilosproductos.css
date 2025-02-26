@@ -1,0 +1,178 @@
+/*Para que todo quede limpio de margenes*/ 
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/*Body en donde trabajaremos y crearemos la propia pagina*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body.background {
+    background-image: url('/images/7.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*Encabezado de la página con el logo, la cita y el menú de pagina por el que desplazarse*/
+header{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(17, 207, 144, 0.718);
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+/***NAV***/
+nav{
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+    margin: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: rgba(17, 207, 144, 0.718);
+    position: relative;
+    justify-content: center;
+}
+nav ul a{
+    padding: 5px 35px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+}
+nav ul a:hover, nav ul a.active{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+/*Main*/
+main{
+    margin: auto;
+    width: 1200px;
+    display: flex;
+}
+main section h1{
+    text-align: center;
+    background-color: rgb(230, 220, 199);
+    padding: 3px 4px;
+    border-radius: 10px;
+}
+/*Form*/
+form{
+    display: flex;
+}
+form ul{
+    margin-left: 10px;
+}
+.search-form input[type="search"] {
+    padding: 5px;
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+    margin-right: 10px;
+    align-items: center;
+}
+.search-form input[type="submit"] {
+    margin-top: 5px;
+    padding: 5px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-form {
+    flex-direction: row;
+    align-items: center;
+}
+/*Productos*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.grid-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.grid-item:hover{
+    transform: scale(1.1);
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.grid-item {
+    flex: 1 1 calc(50% - 60px);
+    max-width: calc(35% - 80px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.grid-item img{
+    width: 400px;
+    height: 400px;
+}
+/*Pie de pagina*/
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+}
+/*Iconos de redes sociales*/
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+.icono {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+.icono:hover {
+    transform: scale(1.1);
+}
+/*Flex para que se adapte a la reduccion de pantalla y pagina*/
+@media (max-width: 768px) {
+    .grid-item {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+    header{
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    header{
+        align-items: center;
+    }
+}
