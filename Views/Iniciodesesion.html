@@ -8,7 +8,7 @@
 </head>
 <body class="background">
     <header>
-        <img src="/images/3.png" alt="Logotipo" class="logo">
+        <img src="/images/3.png" alt="Logotipo" class="logo" height="1080" width="1080">
         <h1>"Cuida el planeta sin renunciar a lo tradicional"</h1>
     </header>
         <nav>
@@ -22,13 +22,13 @@
         </nav>
         <main>
             <section class="login-form">
-                <h1>Iniciar Sesión</h1>
+                <h2>Iniciar Sesión</h2>
                 <form action="#" method="POST">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" pattern=".+@example\.com" size="30" required minlength="5" maxlength="40">
                     
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required >
                     
                     <button type="submit">Ingresar</button>
                 </form>
@@ -36,9 +36,9 @@
         </main>
         <footer>
         <div class="social">
-            <a href="#"><img src="/images/Facebook.png" alt="Facebook" class="icono"></a>
-            <a href="#"><img src="/images/Twitter.png" alt="Twitter" class="icono"></a>
-            <a href="#"><img src="/images/Instagram.png" alt="Instagram" class="icono"></a>
+            <a href="https://www.facebook.com/facebook/?locale=es_ES"><img src="/images/Facebook.png" alt="Facebook" class="icono" height="512" width="512"></a>
+            <a href="https://x.com/twitter?lang=es"><img src="/images/Twitter.png" alt="Twitter" class="icono" height="920" width="920"></a>
+            <a href="https://www.instagram.com/aliceunbounded_/"><img src="/images/Instagram.png" alt="Instagram" class="icono" height="168" width="170"></a>
         </div>
         <p>&copy; 2025 EcoLibros | Dirección de la empresa | <a href="#">Aviso Legal</a></p>
     </footer>
