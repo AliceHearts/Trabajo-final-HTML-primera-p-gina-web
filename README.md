@@ -1,2 +1,2 @@
-# Trabajo-final-HTML-primera-p-gina-web
+# Trabajo-final-HTML-primera-pagina-web
 Primera página HTML sobre biblioteca ecológica
